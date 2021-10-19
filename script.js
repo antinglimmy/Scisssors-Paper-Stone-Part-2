@@ -12,6 +12,7 @@ var drawCount = 0;
 var totalGameCount = 0;
 var userName = "no user name";
 var myOutputValue = "";
+var winPercentage = Math.floor((winCount / totalGameCount) * 100);
 
 //generating a random number from 0-2
 var randomOutput = function () {
@@ -91,7 +92,7 @@ var main = function (input) {
     if (playerWins(input, computerChoice)) {
       winCount += 1;
       totalGameCount += 1;
-      var winPercentage = Math.floor((winCount / totalGameCount) * 100);
+      winPercentage = (winCount / totalGameCount) * 100;
 
       //Customise output message depending on win percentage
       if (winPercentage < 60) {
